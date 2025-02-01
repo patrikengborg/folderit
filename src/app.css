@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+@theme {
+	--font-sans: 'Lato', sans-serif;
+
+	--color-accent-soft: #fef5dc;
+	--color-accent: #f9bd17;
+
+	--color-main: #171717;
+	--color-main-light: #494949;
+	--color-main-soft: #7d7d7d;
+	--color-main-dim: #c9c9c9;
+
+	--color-link: #403fa1;
+
+	--text-xs: 0.8125rem;
+	--text-2xl: 1.5625rem;
+}
+
+@layer base {
+	body {
+		@apply text-main font-sans antialiased;
+	}
+
+	h1,
+	h2 {
+		@apply font-bold;
+	}
+
+	button {
+		@apply inline-flex items-center justify-center gap-2 rounded;
+	}
+
+	a {
+		@apply text-link;
+	}
+
+	input[type='checkbox'] {
+		@apply border-main-soft size-4 cursor-pointer appearance-none rounded border-2 transition-colors;
+
+		&:checked {
+			@apply bg-accent border-accent;
+		}
+	}
+}
+
+@layer components {
+	.input-text {
+		@apply border-main-dim w-full rounded border px-3 py-2;
+	}
+
+	.btn {
+		@apply bg-accent rounded p-2 text-lg font-semibold;
+	}
+
+	.divider {
+		@apply flex items-center gap-2;
+
+		&:before,
+		&:after {
+			content: '';
+			@apply bg-main-dim h-px flex-grow;
+		}
+	}
+
+	.label-inside {
+		@apply grid;
+
+		span,
+		input,
+		select {
+			@apply col-start-1 row-start-1;
+		}
+
+		span {
+			@apply text-main-soft pointer-events-none grid items-center px-3 transition-opacity;
+		}
+
+		&:has(input:focus, input:not(:placeholder-shown)) {
+			span {
+				@apply opacity-0;
+			}
+		}
+	}
+}
