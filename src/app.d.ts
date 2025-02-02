@@ -5,7 +5,9 @@ import '@poppanator/sveltekit-svg/dist/svg';
 declare global {
 	namespace App {
 		// interface Error {}
-		// interface Locals {}
+		interface Locals {
+			token?: string;
+		}
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
