@@ -20,7 +20,7 @@
 			<img src={login} alt="" />
 
 			<h2 class="text-xl">Cloud Document Management System Software</h2>
-			<p class="text-main-light text-balance">
+			<p class="text-main-muted text-balance">
 				Award-winning DMS for greener more secure storage, management and approval of digital
 				documents.
 			</p>

@@ -7,9 +7,12 @@
 	--color-accent: #f9bd17;
 
 	--color-main: #171717;
-	--color-main-light: #494949;
+	--color-main-muted: #494949;
 	--color-main-soft: #7d7d7d;
 	--color-main-dim: #c9c9c9;
+	--color-main-pale: #e9e9e9;
+	--color-main-hazy: #f6f6f6;
+	--color-main-mist: #fbfbfb;
 
 	--color-link: #403fa1;
 
@@ -32,7 +35,6 @@
 	}
 
 	a {
-		@apply text-link;
 	}
 
 	input[type='checkbox'] {
@@ -81,5 +83,9 @@
 				@apply opacity-0;
 			}
 		}
+	}
+
+	.eyebrow {
+		@apply text-main-soft text-xs font-bold tracking-wide uppercase;
 	}
 }
