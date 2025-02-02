@@ -22,7 +22,7 @@
 
 @layer base {
 	body {
-		@apply text-main font-sans antialiased;
+		@apply text-main-muted font-sans antialiased;
 	}
 
 	h1,
@@ -43,6 +43,19 @@
 		&:checked {
 			@apply bg-accent border-accent;
 		}
+	}
+
+	th {
+		@apply text-start text-sm font-bold tracking-wide uppercase;
+	}
+
+	td,
+	th {
+		@apply py-2;
+	}
+
+	tr:nth-child(odd) td {
+		@apply bg-main-hazy;
 	}
 }
 
