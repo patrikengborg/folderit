@@ -10,7 +10,7 @@
 
 	<p class="text-main-soft">Enter your credentials to access your account</p>
 
-	<form action="?/login" method="POST" class="mt-8 grid gap-2.5">
+	<form action="/auth/login" method="POST" class="mt-8 grid gap-2.5">
 		<label class="label-inside">
 			<span>Email</span>
 			<input type="email" name="email" class="input-text" placeholder="" />
