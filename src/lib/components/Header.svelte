@@ -8,7 +8,7 @@
 	import { page } from '$app/state'
 </script>
 
-<header class="border-main-pale sticky top-0 flex items-end justify-between border-b bg-white">
+<header class="border-main-pale sticky top-0 z-10 flex items-end justify-between border-b bg-white">
 	<Actions />
 
 	<div class="grid place-items-end gap-2">
