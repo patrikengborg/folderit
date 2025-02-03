@@ -1,11 +1,12 @@
 import { FOLDERIT_CLIENT_SECRET } from '$env/static/private'
-import { PUBLIC_FOLDERIT_CLIENT_ID } from '$env/static/public'
+import { PUBLIC_FOLDERIT_CLIENT_ID, PUBLIC_REDIRECT_URI } from '$env/static/public'
 import { error, redirect } from '@sveltejs/kit'
 
 export async function load({ url, cookies }) {
 	const code = url.searchParams.get('code')
 
 	if (!code) {
+		console.error('No code provided')
 		return error(400)
 	}
 
@@ -19,7 +20,7 @@ export async function load({ url, cookies }) {
 			grant_type: 'authorization_code',
 			client_id: PUBLIC_FOLDERIT_CLIENT_ID,
 			client_secret: FOLDERIT_CLIENT_SECRET,
-			redirect_uri: 'http://localhost:5173/auth/callback',
+			redirect_uri: PUBLIC_REDIRECT_URI,
 			code
 		})
 	})
@@ -27,6 +28,7 @@ export async function load({ url, cookies }) {
 	const data = await response.json()
 
 	if (!data || data.error) {
+		console.error('Fetch token failed', data.error)
 		return error(400)
 	}
 
