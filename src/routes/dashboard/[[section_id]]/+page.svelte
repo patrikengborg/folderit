@@ -6,7 +6,12 @@
 	import { format } from '@formkit/tempo'
 
 	let { data } = $props()
+	$inspect(data.section)
 </script>
+
+<p class="mb-4 flex items-baseline gap-2 text-sm">
+	<span>{data.account.name}</span> <span class="text-xl">›</span> <span>{data.section?.name}</span>
+</p>
 
 {#if data.files.length > 0}
 	<table class="w-full">
@@ -22,9 +27,11 @@
 		</thead>
 		<tbody>
 			{#each data.files as file}
-				<tr>
+				<tr class="group">
 					<td class="ps-4"><input type="checkbox" /></td>
-					<td>{file.name}</td>
+					<td>
+						<a class="group-hover:text-link" href={`/files/${file.uid}`}>{file.name}</a>
+					</td>
 					<td></td>
 					<td>{format(file.date)}</td>
 					<td>{prettyBytes(file.size)}</td>
@@ -39,7 +46,7 @@
 		</tbody>
 	</table>
 {:else}
-	<div class="m-auto text-center">
+	<div class="grid h-full place-content-center text-center">
 		<figure class="bg-main-hazy mx-auto flex size-32 items-center justify-center rounded-full p-8">
 			<img src={ImgUploadFile} alt="" />
 		</figure>

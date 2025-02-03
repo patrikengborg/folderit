@@ -101,4 +101,14 @@
 	.eyebrow {
 		@apply text-main-soft text-xs font-bold tracking-wide uppercase;
 	}
+
+	.dropdown {
+		button {
+			@apply w-full cursor-pointer justify-start px-2 py-1.5 whitespace-nowrap;
+
+			&:hover {
+				@apply bg-accent-soft;
+			}
+		}
+	}
 }

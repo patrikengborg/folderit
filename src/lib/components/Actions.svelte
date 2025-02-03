@@ -1,15 +1,15 @@
 <script lang="ts">
-	import AddFolderIcon from '$assets/icons/folder-plus.svg?component';
-	import DownloadIcon from '$assets/icons/download.svg?component';
-	import DeleteIcon from '$assets/icons/trash.svg?component';
-	import MetadataIcon from '$assets/icons/tag.svg?component';
-	import ModifyIcon from '$assets/icons/edit.svg?component';
-	import ColumnsIcon from '$assets/icons/columns.svg?component';
-	import ApprovalIcon from '$assets/icons/dataflow.svg?component';
-	import RetentionIcon from '$assets/icons/clock-rewind.svg?component';
-	import MoveIcon from '$assets/icons/folder-move.svg?component';
-	import NumberingIcon from '$assets/icons/file-numbering.svg?component';
-	import DuplicateIcon from '$assets/icons/duplicate.svg?component';
+	import AddFolderIcon from '$assets/icons/folder-plus.svg?component'
+	import DownloadIcon from '$assets/icons/download.svg?component'
+	import DeleteIcon from '$assets/icons/trash.svg?component'
+	import MetadataIcon from '$assets/icons/tag.svg?component'
+	import ModifyIcon from '$assets/icons/edit.svg?component'
+	import ColumnsIcon from '$assets/icons/columns.svg?component'
+	import ApprovalIcon from '$assets/icons/dataflow.svg?component'
+	import RetentionIcon from '$assets/icons/clock-rewind.svg?component'
+	import MoveIcon from '$assets/icons/folder-move.svg?component'
+	import NumberingIcon from '$assets/icons/file-numbering.svg?component'
+	import DuplicateIcon from '$assets/icons/duplicate.svg?component'
 
 	const actions = [
 		{
@@ -56,14 +56,14 @@
 			label: 'Duplicate',
 			icon: DuplicateIcon
 		}
-	];
+	]
 </script>
 
 <div class="flex gap-5">
 	{#each actions as action}
 		<button
 			type="button"
-			class="hover:text-link grid cursor-pointer place-items-center gap-2 text-sm font-bold"
+			class="hover:text-accent grid cursor-pointer place-items-center gap-2 text-sm font-bold transition-colors"
 		>
 			{#if action.icon}
 				<action.icon />
