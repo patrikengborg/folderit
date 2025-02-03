@@ -20,7 +20,7 @@
 
 	<Nav />
 
-	<main>
+	<main class="overflow-y-auto">
 		{@render children()}
 	</main>
 

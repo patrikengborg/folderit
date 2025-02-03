@@ -9,12 +9,12 @@
 	$inspect(data.section)
 </script>
 
-<p class="mb-4 flex items-baseline gap-2 text-sm">
+<p class="sticky -top-4 flex items-baseline gap-2 bg-white pb-4 text-sm">
 	<span>{data.account.name}</span> <span class="text-xl">›</span> <span>{data.section?.name}</span>
 </p>
 
 {#if data.files.length > 0}
-	<table class="w-full">
+	<table class=" w-full">
 		<thead>
 			<tr>
 				<th class="ps-4"><input type="checkbox" /></th>
