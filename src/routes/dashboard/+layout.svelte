@@ -7,6 +7,10 @@
 	let { data, children } = $props()
 </script>
 
+<svelte:head>
+	<title>Folderit - Dashboard</title>
+</svelte:head>
+
 <div
 	class="grid h-dvh grid-cols-[minmax(280px,auto)_1fr] grid-rows-[auto_1fr_auto] [&>*]:px-6 [&>*]:py-4"
 >
