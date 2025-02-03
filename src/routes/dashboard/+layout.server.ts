@@ -26,7 +26,7 @@ export async function load({ locals, params }) {
 	const section = sections.find((section) => section.uid === section_id)
 
 	const files = await api.get<File[]>(
-		`accounts/${account.uid}/folders/${section_id}/files`,
+		`accounts/${account.uid}/folders/${section_id}/files?per-page=100`,
 		locals.token
 	)
 

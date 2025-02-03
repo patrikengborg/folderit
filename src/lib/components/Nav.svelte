@@ -37,7 +37,7 @@
 	</div>
 
 	<a
-		href="/auth/logout"
+		href="/dashboard"
 		class="mt-2 flex items-center gap-2 text-sm font-bold tracking-wider uppercase"
 	>
 		<IconNew class="text-accent" />
