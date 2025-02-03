@@ -1,4 +1,5 @@
-import { FOLDERIT_CLIENT_ID, FOLDERIT_CLIENT_SECRET } from '$env/static/private'
+import { FOLDERIT_CLIENT_SECRET } from '$env/static/private'
+import { PUBLIC_FOLDERIT_CLIENT_ID } from '$env/static/public'
 import { error, redirect } from '@sveltejs/kit'
 
 export async function load({ url, cookies }) {
@@ -16,7 +17,7 @@ export async function load({ url, cookies }) {
 		},
 		body: new URLSearchParams({
 			grant_type: 'authorization_code',
-			client_id: FOLDERIT_CLIENT_ID,
+			client_id: PUBLIC_FOLDERIT_CLIENT_ID,
 			client_secret: FOLDERIT_CLIENT_SECRET,
 			redirect_uri: 'http://localhost:5173/auth/callback',
 			code
