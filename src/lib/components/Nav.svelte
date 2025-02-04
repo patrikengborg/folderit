@@ -10,7 +10,7 @@
 	class="bg-main-mist border-main-pale row-span-2 flex flex-col gap-6 overflow-y-auto border-e text-lg"
 >
 	<a href="/dashboard" class="hover:text-main-soft flex items-center gap-2">
-		<IconHome />
+		<IconHome class="size-5" />
 		My Dashboard <span class="bg-accent ms-auto rounded px-1.5 py-0.5 text-xs font-bold">3</span>
 	</a>
 

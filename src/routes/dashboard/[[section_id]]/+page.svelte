@@ -1,12 +1,8 @@
 <script lang="ts">
 	import ImgUploadFile from '$assets/illustrations/upload.svg?url'
-	import IconThreeDots from '$assets/icons/three-dots.svg?component'
-	import IconShare from '$assets/icons/share.svg?component'
-	import prettyBytes from 'pretty-bytes'
-	import { format } from '@formkit/tempo'
+	import FileRow from './FileRow.svelte'
 
 	let { data } = $props()
-	$inspect(data.section)
 </script>
 
 <p class="sticky -top-4 flex items-baseline gap-2 bg-white pb-4 text-sm">
@@ -27,21 +23,7 @@
 		</thead>
 		<tbody>
 			{#each data.files as file}
-				<tr class="group">
-					<td class="ps-4"><input type="checkbox" /></td>
-					<td>
-						<a class="group-hover:text-link" href={`/files/${file.uid}`}>{file.name}</a>
-					</td>
-					<td></td>
-					<td>{format(file.date)}</td>
-					<td>{prettyBytes(file.size)}</td>
-					<td>
-						<div class="flex items-center gap-2">
-							<IconShare />
-							<IconThreeDots />
-						</div>
-					</td>
-				</tr>
+				<FileRow {file} />
 			{/each}
 		</tbody>
 	</table>

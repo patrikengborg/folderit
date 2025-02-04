@@ -1,60 +1,60 @@
 <script lang="ts">
-	import AddFolderIcon from '$assets/icons/folder-plus.svg?component'
-	import DownloadIcon from '$assets/icons/download.svg?component'
-	import DeleteIcon from '$assets/icons/trash.svg?component'
-	import MetadataIcon from '$assets/icons/tag.svg?component'
-	import ModifyIcon from '$assets/icons/edit.svg?component'
-	import ColumnsIcon from '$assets/icons/columns.svg?component'
-	import ApprovalIcon from '$assets/icons/dataflow.svg?component'
-	import RetentionIcon from '$assets/icons/clock-rewind.svg?component'
-	import MoveIcon from '$assets/icons/folder-move.svg?component'
-	import NumberingIcon from '$assets/icons/file-numbering.svg?component'
-	import DuplicateIcon from '$assets/icons/duplicate.svg?component'
+	import IconAddFolder from '$assets/icons/folder-plus.svg?component'
+	import IconDownload from '$assets/icons/download.svg?component'
+	import IconDelete from '$assets/icons/trash.svg?component'
+	import IconMetadata from '$assets/icons/tag.svg?component'
+	import IconModify from '$assets/icons/edit.svg?component'
+	import IconColumns from '$assets/icons/columns.svg?component'
+	import IconApproval from '$assets/icons/dataflow.svg?component'
+	import IconRetention from '$assets/icons/clock-rewind.svg?component'
+	import IconMove from '$assets/icons/folder-move.svg?component'
+	import IconNumbering from '$assets/icons/file-numbering.svg?component'
+	import IconDuplicate from '$assets/icons/duplicate.svg?component'
 
 	const actions = [
 		{
 			label: '+ folder',
-			icon: AddFolderIcon
+			icon: IconAddFolder
 		},
 		{
 			label: 'Download',
-			icon: DownloadIcon
+			icon: IconDownload
 		},
 		{
 			label: 'Delete',
-			icon: DeleteIcon
+			icon: IconDelete
 		},
 		{
 			label: 'Metadata',
-			icon: MetadataIcon
+			icon: IconMetadata
 		},
 		{
 			label: 'Modify',
-			icon: ModifyIcon
+			icon: IconModify
 		},
 		{
 			label: 'Columns',
-			icon: ColumnsIcon
+			icon: IconColumns
 		},
 		{
 			label: 'Approval',
-			icon: ApprovalIcon
+			icon: IconApproval
 		},
 		{
 			label: 'Retention',
-			icon: RetentionIcon
+			icon: IconRetention
 		},
 		{
 			label: 'Move',
-			icon: MoveIcon
+			icon: IconMove
 		},
 		{
 			label: 'Numbering',
-			icon: NumberingIcon
+			icon: IconNumbering
 		},
 		{
 			label: 'Duplicate',
-			icon: DuplicateIcon
+			icon: IconDuplicate
 		}
 	]
 </script>
@@ -66,7 +66,7 @@
 			class="hover:text-accent grid cursor-pointer place-items-center gap-2 text-sm font-bold transition-colors"
 		>
 			{#if action.icon}
-				<action.icon />
+				<action.icon class="size-6" />
 			{/if}
 			<span class="hidden whitespace-nowrap xl:block">{action.label}</span>
 		</button>
