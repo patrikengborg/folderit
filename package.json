@@ -36,6 +36,7 @@
 	},
 	"dependencies": {
 		"@fontsource/lato": "^5.1.1",
+		"@formkit/drag-and-drop": "^0.3.3",
 		"@formkit/tempo": "^0.1.2",
 		"pretty-bytes": "^6.1.1"
 	}
