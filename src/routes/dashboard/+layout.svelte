@@ -12,7 +12,7 @@
 </svelte:head>
 
 <div
-	class="grid h-dvh grid-cols-[minmax(280px,auto)_1fr] grid-rows-[auto_1fr_auto] [&>*]:px-6 [&>*]:py-4"
+	class="grid h-dvh grid-cols-[minmax(280px,auto)_1fr] grid-rows-[auto_1fr] [&>*]:px-6 [&>*]:py-4"
 >
 	<AccountSwitcher />
 
@@ -20,9 +20,9 @@
 
 	<Nav />
 
-	<main class="overflow-y-auto">
+	<main class="grid-rows[1fr_auto] grid overflow-y-auto">
 		{@render children()}
-	</main>
 
-	<Footer />
+		<Footer />
+	</main>
 </div>

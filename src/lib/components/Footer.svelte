@@ -1,4 +1,4 @@
-<footer class="text-main-soft sticky bottom-0 text-xs">
+<footer class="text-main-soft mt-auto text-xs">
 	<p class="mb-4 text-end">Import files via email</p>
 
 	<div class="flex justify-between py-2">
