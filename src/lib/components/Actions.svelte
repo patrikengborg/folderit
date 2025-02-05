@@ -13,7 +13,7 @@
 
 	const actions = [
 		{
-			label: '+ folder',
+			label: '+ Folder',
 			icon: IconAddFolder
 		},
 		{
@@ -59,11 +59,11 @@
 	]
 </script>
 
-<div class="flex gap-5">
+<div class="flex gap-3 text-xs font-semibold">
 	{#each actions as action}
 		<button
 			type="button"
-			class="hover:text-accent grid cursor-pointer place-items-center gap-2 text-sm font-bold transition-colors"
+			class="hover:text-accent grid cursor-pointer place-items-center gap-1 transition-colors"
 		>
 			{#if action.icon}
 				<action.icon class="size-6" />
